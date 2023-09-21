@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .group {
+            width: 300px;
+            border: 1px solid #ddd;
+        }
+
+        .group .header {
+            background-color: gold;
+            padding: 8px 5px;
+        }
+
+        .group .menu a {
+            display: block;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="group">
+    <div class="item">
+        <div class="header" onclick="clickMenu(this);">头部</div>
+        <div class="menu">
+            <a href="https://www.baidu.com">菜单1</a>
+            <a href="https://www.baidu.com">菜单2</a>
+        </div>
+
+    </div>
+    <div class="item">
+        <div class="header" onclick="clickMenu(this);">头部</div>
+        <div class="menu">
+            <a href="https://www.baidu.com">菜单1</a>
+            <a href="https://www.baidu.com">菜单2</a>
+        </div>
+
+    </div>
+    <div class="item">
+        <div class="header" onclick="clickMenu(this);">头部</div>
+        <div class="menu">
+            <a href="https://www.baidu.com">菜单1</a>
+            <a href="https://www.baidu.com">菜单2</a>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function clickMenu(ths) {
+        // ths，代指的当前点击的那个标签
+        // 1.找到自己下面的一个兄弟标签
+        // 2.给他加上一个样式 hide
+        var tag = ths.nextElementSibling;
+        if (tag.className == "menu") {
+            tag.classList.add("hide")
+        } else {
+            tag.classList.remove("hide")
+        }
+    }
+</script>
+
+</body>
+</html>

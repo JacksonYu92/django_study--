@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .group {
+            width: 300px;
+            border: 1px solid #ddd;
+        }
+
+        .group .header {
+            background-color: gold;
+            padding: 8px 5px;
+        }
+
+        .group .menu a {
+            display: block;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="group">
+    <div class="item">
+        <div class="header">头部</div>
+        <div class="menu hide">
+            <a href="https://www.baidu.com">菜单1</a>
+            <a href="https://www.baidu.com">菜单2</a>
+        </div>
+
+    </div>
+    <div class="item">
+        <div class="header">头部</div>
+        <div class="menu hide ">
+            <a href="https://www.baidu.com">菜单1</a>
+            <a href="https://www.baidu.com">菜单2</a>
+        </div>
+
+    </div>
+    <div class="item">
+        <div class="header">头部</div>
+        <div class="menu hide">
+            <a href="https://www.baidu.com">菜单1</a>
+            <a href="https://www.baidu.com">菜单2</a>
+        </div>
+
+    </div>
+</div>
+
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    // 给所有 clss=header 的标签设置点击事件
+    $(".header").click(function () {
+        // 自己展开
+         $(this).next().removeClass('hide');
+
+        // 别人，给他关闭。
+        $(this).parent().siblings().find(".menu").addClass("hide");
+    });
+
+</script>
+</body>
+</html>

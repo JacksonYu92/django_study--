@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="txt"/>
+<input type="button" value="添加" id="btnAdd">
+
+<ul id="dataList">
+    <li>周六轮</li>
+    <li>刘畊宏</li>
+    <li>陈冠希</li>
+</ul>
+
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    $(function () {
+
+        $("#btnAdd").click(function () {
+            $("#dataList").append($("<li>").text($("#txt").val()));
+        });
+
+        bindLi();
+
+    })
+
+    function bindLi() {
+        $("#dataList").on("click", "li", function () {
+            $(this).remove();
+        })
+    }
+
+</script>
+</body>
+</html>

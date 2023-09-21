@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="button" value="全选" id="btnAll"/>
+<input type="button" value="取消" id="btnClear"/>
+<input type="button" value="反选" id="btnReverse"/>
+<table border="1">
+    <thead>
+    <tr>
+        <th>选择</th>
+        <th>ID</th>
+        <th>姓名</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><input type="checkbox"/></td>
+        <td> 1</td>
+        <td> 武沛齐</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"/></td>
+        <td> 1</td>
+        <td> 武沛齐</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"/></td>
+        <td> 1</td>
+        <td> 武沛齐</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"/></td>
+        <td> 1</td>
+        <td> 武沛齐</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"/></td>
+        <td> 1</td>
+        <td> 武沛齐</td>
+    </tr>
+    </tbody>
+</table>
+
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    $("#btnAll").click(function () {
+        $("table input[type='checkbox']").prop('checked', true);
+    })
+
+    $("#btnClear").click(function () {
+        $("table input[type='checkbox']").prop('checked', false);
+    })
+
+    $("#btnReverse").click(function () {
+        $("table input[type='checkbox']").each(function () {
+            /*
+            var old = $(this).prop('checked');
+            if (old) {
+                $(this).prop('checked', false);
+            } else {
+                $(this).prop('checked', true);
+            }
+             */
+            var old = $(this).prop('checked');
+            $(this).prop('checked', !old);
+        })
+    })
+</script>
+</body>
+</html>

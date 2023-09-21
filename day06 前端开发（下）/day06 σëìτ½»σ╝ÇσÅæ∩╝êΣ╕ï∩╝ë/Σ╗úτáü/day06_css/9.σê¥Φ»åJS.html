@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .c1{
+            /* color:red; */
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="请输入内容" id="content"/>
+    <input type="button" value="点击" onclick="clickMe();"/>
+    <!-- <h1>显示内容</h1> -->
+    <div id="txt">无</div>
+
+
+    <script>
+        function clickMe() {
+            // 1.获取用户输入的内容
+            /*  多行注释。。asdfasdf阿斯蒂芬 */
+
+            var tag = document.getElementById("content");
+            var userInputData = tag.value;
+
+            // 2.找到div，并将内容赋值
+            var tagTxt = document.getElementById("txt");
+            tagTxt.innerText = userInputData;
+        }
+    </script>
+</body>
+</html>

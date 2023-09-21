@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .top {
+            background-color: #333;
+        }
+
+        .container {
+            width: 1226px;
+            margin: 0 auto;
+        }
+
+        .clearfix:after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+        .top a {
+            display: inline-block;
+            line-height: 40px;
+            color: #b0b0b0;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+        .top a:hover {
+            color: white;
+        }
+
+        .hd .logo {
+            float: left;
+            width: 234px;
+        }
+
+        .hd .main-menu {
+            float: left;
+        }
+        .hd .main-menu a{
+            display: inline-block;
+            padding: 40px 20px;
+            color: #333;
+            text-decoration: none;
+        }
+        .hd .main-menu a:hover{
+            color: #ff6700;
+        }
+        .hd .search {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+
+<div class="top">
+    <div class="container clearfix">
+        <a href="https://www.mi.com/">首页</a>
+        <a href="https://www.mi.com/">MIUI</a>
+        <div style="float: right">
+            <a href="https://www.mi.com/">登录</a>
+            <a href="https://www.mi.com/">注册</a>
+        </div>
+    </div>
+</div>
+
+<div class="hd">
+    <div class="container clearfix">
+        <div class="logo">
+            <a style="height: 56px;width: 56px;display: inline-block;margin-top: 20px;">
+                <img src="imgs/logo-mi2.png" style="width: 100%" />
+            </a>
+
+        </div>
+        <div class="main-menu">
+            <a href="https://www.mi.com/">小米手机</a>
+            <a href="https://www.mi.com/">红米手机</a>
+            <a href="https://www.mi.com/">电视</a>
+        </div>
+        <div class="search">
+        </div>
+    </div>
+</div>
+
+<div class="banner">
+    <div class="container">
+        <a style="width: 1226px">
+            <img src="imgs/b2.png" style="width: 100%">
+        </a>
+    </div>
+</div>
+
+
+</body>
+</html>
